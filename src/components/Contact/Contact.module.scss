@@ -1,0 +1,139 @@
+.contact {
+  background: #0D0D2B;
+  padding: 190px 150px 0;
+  position: relative;
+
+  &__coin {
+    position: absolute;
+    z-index: 1;
+
+    &_stellar {
+      position: absolute;
+      right: 0%;
+      top: 27%;
+      bottom: 0%;
+    }
+
+    &_bitcoin {
+      right: 0%;
+      top: 55%;
+    }
+
+    &_etherium {
+      top: 49%;
+      left: -66px;
+    }
+
+    &_cardano {
+      top: 18%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1140px;
+    height: 258px;
+    background: rgba(54, 113, 233, 0.01);
+
+    position: relative;
+    z-index: 2;
+    border: 4px solid #3672E9;
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 16px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFFFFF;
+  }
+
+  &__title {
+    margin-top: 12px;
+    margin-bottom: 42px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #FFFFFF;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    width: 70%;
+    border-radius: 32px;
+    background: #3672E9;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #FFF;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .contact__content {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    padding-top: 100px;
+
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__button {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__coin {
+      &_etherium {
+        top: 10px;
+      }
+
+      &_bitcoin {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .contact {
+    padding: 100px 16px;
+
+    &__coin {
+      &_stellar, &_etherium, &_cardano {
+        display: none;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 600;
+    }
+  }
+}

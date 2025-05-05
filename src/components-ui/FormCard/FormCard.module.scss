@@ -1,0 +1,52 @@
+.card {
+  width: 554px;
+  padding: 56px 95px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 38px;
+  background: #FFF;
+  margin: 0 auto;
+
+  &__title {
+    color: #0D0D0D;
+    line-height: 48px;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin: 8px 0 42px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #999;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .card {
+    padding: 30px 95px;
+  }
+}
+
+
+@media only screen and (max-width: 425px) {
+  .card {
+    width: 300px;
+    padding: 42px 28px;
+
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}
+

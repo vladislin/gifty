@@ -1,0 +1,100 @@
+.button {
+  border-radius: 32px;
+  width: 100%;
+  font-weight: 600;
+  border: none;
+  color: #FFFFFF;
+  &:disabled{
+    background: rgba(54, 114, 233, 0.5)!important;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+
+  //type
+  &.primary {
+    background: #3672E9;
+
+    &:hover {
+      background: #3672E980;
+    }
+
+  }
+
+  &.outlined {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+
+    &:hover {
+      color: #A3BEF5;
+      border-color: #A3BEF5;
+    }
+  }
+
+  &.secondary {
+    background: #0A255C;
+
+    &:hover {
+      background: #477EEB;
+    }
+  }
+
+  //size
+  &.xl {
+    height: 72px;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 24px 12px;
+    width: 212px;
+
+  }
+
+  &.large {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 16px 12px;
+    height: 56px;
+  }
+
+  &.medium {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px 12px;
+    height: 44px;
+  }
+
+  &.small {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 12px;
+    height: 40px;
+  }
+}
+
+
+@media only screen and (max-width: 425px) {
+  .button {
+    &.small {
+      width: 95px;
+      padding: 4px 12px 4px 12px;
+      font-size: 12px;
+      line-height: 18px;
+      height: 25px;
+    }
+
+    &.large {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 10px 12px;
+      height: 44px;
+    }
+
+    &.xl {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 8px 30px;
+      height: 40px;
+    }
+  }
+
+}

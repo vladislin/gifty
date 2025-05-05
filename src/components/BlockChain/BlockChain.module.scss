@@ -1,0 +1,267 @@
+.purchase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 250px;
+  position: relative;
+  margin-inline: 250px;
+
+  &__test{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__coin {
+    position: absolute;
+    //right coins
+    &_stellar {
+      right: 275px;
+      top: 20px
+    }
+
+    &_bitcoin {
+      right: 5px;
+      top: 200px;
+    }
+
+    &_binance {
+      right: 135px;
+      top: 630px;
+    }
+
+    //left coins
+    &_cardano {
+      left: 300px;
+      top: -20px;
+    }
+
+    &_lite {
+      left: 30px;
+      top: 430px;
+    }
+
+    &_ethereum {
+      left: 0;
+      top: 40px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 54px;
+  }
+
+  &__calculator {
+    padding: 98px;
+    width: 750px;
+    height: 626px;
+    background: rgba(3, 24, 68, 0.54);
+    backdrop-filter: blur(35px);
+    border-radius: 25px;
+
+    &_bg {
+      background-image: url('../../assets/elements/EllipsePurchase.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &__button_icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 16px;
+    width: 203px;
+    height: 56px;
+    background: #FFFFFF;
+    border-radius: 32px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3672E9;
+  }
+
+  &__line {
+    width: 100%;
+    margin-top: 42px;
+    margin-bottom: 42px;
+    height: 1px;
+    background: rgba(218, 218, 218, 0.12);
+  }
+
+  &__label {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+  }
+
+  &__inputs {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+  }
+
+  &__input {
+    flex: 1;
+
+    &_result {
+      width: 100%;
+      border: 2px solid #F2F2F2;
+      padding: 10px 15px;
+      background: transparent;
+      color: #F2F2F2;
+      line-height: 24px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      @media only screen and (max-width: 1440px) {
+        height: 44px;
+      }
+    }
+  }
+
+  &__button {
+    width: 356px;
+    margin: 0 auto;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .purchase {
+    margin-inline: 0;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .purchase {
+    &__coin {
+      &_binance {
+        width: 250px;
+        height: 250px;
+      }
+
+      &_lite {
+        height: 250px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .purchase {
+    margin-bottom: 100px;
+
+    &__coin {
+      width: 250px;
+      height: 250px;
+
+      &_binance {
+        height: 120px;
+      }
+
+      &_stellar {
+        top: 62px;
+      }
+
+      &_cardano {
+        left: 500px;
+        top: 48px;
+      }
+
+
+    }
+
+    &__calculator {
+      height: auto;
+      padding: 50px;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .purchase {
+    &__calculator {
+      padding: 25px;
+      width: 550px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .purchase {
+    &__calculator {
+      width: 390px;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+    }
+
+    &__subtitle {
+      padding-bottom: 36px;
+    }
+
+    &__line {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__label {
+      margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      width: 80px;
+      justify-content: center;
+    }
+
+    &__button_icon {
+      padding: 8px 65px;
+      height: 35px;
+      width: 136px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &__coin {
+      &_stellar, &_bitcoin, &_binance, &_cardano, &_lite, &_ethereum {
+        display: none;
+      }
+    }
+  }
+}

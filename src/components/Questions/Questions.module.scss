@@ -1,0 +1,135 @@
+.questions {
+  padding-top: 150px;
+  padding-inline: 248px;
+  background: #0D0D2B;
+  position: relative;
+
+  &__colum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  &__headline {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 18px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 117px;
+      width: 235px;
+      height: 95px; /* Adjust the height as needed */
+      background-image: url('../../assets/elements/oval2.png');
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+      margin-left: -150px;
+    }
+
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    color: #E6E6E6;
+    text-align: center;
+  }
+
+  &__list {
+    padding-top: 75px;
+    padding-bottom: 77px;
+
+  }
+
+  &__item {
+    padding: 26px 16px;
+    border-top: 1px solid #0F388A;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:last-child {
+      border-bottom: 1px solid #0F388A;
+    }
+  }
+
+
+  &__coin {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+  }
+
+  &-icon {
+
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .questions {
+    padding-top: 50px;
+    padding-inline: 100px;
+    background: #0D0D2B;
+    &__coin {
+      display: none;
+    }
+    &__headline {
+      &::after {
+
+        top: 30px;
+        width: 235px;
+        height: 95px;
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+        margin-left: -150px;
+      }}
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .questions {
+  padding: 0 20px;
+
+    &__headline {
+      font-size: 24px;
+      line-height: 36px;
+
+      &::after {
+        top: -21px;
+        width: 160px;
+        height: 64px; /* Adjust the height as needed */
+        right: 24px;
+        background-image: url("../../assets/elements/questionsMobile.png");
+      }
+
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+  }
+}
+.answer{
+  color: white;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 16px;
+}
